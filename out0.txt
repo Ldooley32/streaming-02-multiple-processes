@@ -5,3 +5,44 @@ This will clear the console output.
 Run the file once while the tasks are short. 
 
 Copy and paste the terminal results (when task_duration is 0) here.
+
+/usr/local/bin/python3 /Users/lauradooley/Documents/streaming-02-multiple-processes-1/msses.py
+(base) lauradooley@Lauras-MacBook-Pro-2 streaming-02-multiple-processes-1 % /usr/local/b
+in/python3 /Users/lauradooley/Documents/streaming-02-multiple-processes-1/multiple_proce
+sses.py
+2024-05-12 20:41:12,877 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-12 at 08:41 PM
+  Operating System: posix Darwin 23.4.0
+  Python Version:   3.12.2
+  Path to Interpreter:  /usr/local/bin/python3
+======================================================================
+
+2024-05-12 20:41:12,877 - INFO - Called recreate_database().
+2024-05-12 20:41:12,877 - INFO - Called drop_table().
+2024-05-12 20:41:12,878 - INFO - Table 'pets' dropped successfully.
+2024-05-12 20:41:12,878 - INFO - Called create_table().
+2024-05-12 20:41:12,879 - INFO - Table 'pets' created successfully.
+2024-05-12 20:41:12,918 - INFO - Called process_one().
+2024-05-12 20:41:12,918 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-12 20:41:12,918 - INFO - Called process_two().
+2024-05-12 20:41:12,918 - INFO - Called process_three().
+2024-05-12 20:41:12,918 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-12 20:41:12,918 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-12 20:41:12,919 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2024-05-12 20:41:12,920 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2024-05-12 20:41:12,922 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2024-05-12 20:41:12,927 - INFO - 
+SUCCESS: All processes successfully completed!
+
+Now - increase the task duration (representing 
+      the time the task has the database 
+      tied up during an insert statement).
+How well do multiple, concurrent processes share a database 
+    when each task takes more time? There were a few database is locked errors at the end when the duration was increased.
+How can multiple processes share a resource
+    without interfering with each other? by finding a balanced time for the processes. I did see after reseraching the error that if 
+    there are multiple connection to the source this may prevent the locked errors.
+
+(base) lauradooley@Lauras-MacBook-Pro-2 streaming-02-multiple-processes-1 % 

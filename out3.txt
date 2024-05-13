@@ -5,3 +5,33 @@ This will clear the console output.
 Run the file once while the tasks are longer. 
 
 Copy and paste the terminal results (when task_duration is 3) here.
+(base) lauradooley@Lauras-MacBook-Pro-2 streaming-02-multiple-processes-1 % /usr/local/b
+i(base) lauradooley@Lauras-MacBook-Pro-2 streaming-02-multiple-processes-1 % /usr/local/b
+in/python3 /Users/lauradooley/Documents/streaming-02-multiple-processes-1/multiple_proce
+sses.py
+2024-05-12 20:45:06,924 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-12 at 08:45 PM
+  Operating System: posix Darwin 23.4.0
+  Python Version:   3.12.2
+  Path to Interpreter:  /usr/local/bin/python3
+======================================================================
+
+2024-05-12 20:45:06,924 - INFO - Called recreate_database().
+2024-05-12 20:45:06,924 - INFO - Called drop_table().
+2024-05-12 20:45:06,925 - INFO - Table 'pets' dropped successfully.
+2024-05-12 20:45:06,925 - INFO - Called create_table().
+2024-05-12 20:45:06,926 - INFO - Table 'pets' created successfully.
+2024-05-12 20:45:06,962 - INFO - Called process_two().
+2024-05-12 20:45:06,962 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-12 20:45:06,962 - INFO - Called process_one().
+2024-05-12 20:45:06,962 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-12 20:45:06,963 - INFO - Called process_three().
+2024-05-12 20:45:06,963 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-12 20:45:09,970 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2024-05-12 20:45:12,162 - ERROR - ERROR while P3 inserting pet Emma: database is locked
+2024-05-12 20:45:12,163 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2024-05-12 20:45:12,189 - ERROR - ERROR while P2 inserting pet Cooper: database is locked
+2024-05-12 20:45:12,189 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+(base) lauradooley@Lauras-MacBook-Pro-2 streaming-02-multiple-processes-1 % 
